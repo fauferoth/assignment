@@ -1,4 +1,4 @@
-import delim using "C:\Users\ta62nime\FAUbox\Kursmaterial\EBE Effective Programming\Assignment Florian Auferoth\assignment\src\data_management\STU_red.txt", clear
+import delim using "C:\Users\ta62nime\FAUbox\Kursmaterial\EBE_Effective_Programming\Assignment_Florian_Auferoth\assignment\src\data_management\STU_red.txt", clear
 *correcting for mistake
 gen hv42=v42
 replace hv42=0 if missing(v42)
@@ -17,7 +17,7 @@ rename v9 ST02Q01
 rename v10 ST03Q01
 rename v11 ST03Q02
 rename v12 ST04Q01
-rename v13 ST05Q01
+rename v13 ST05Q01 	
 rename v14 ST06Q01
 rename v15 ST07Q01
 rename v16 ST07Q02
@@ -639,4 +639,4 @@ rename v633 VAR_UNIT //2331 - //2332
 rename v634 senwgt_STU //2333 - //2341
 rename v635 VER_STU //2342 - //2348 (A)
 drop hv42
-save "C:\Users\ta62nime\FAUbox\Data backup\STU_red.dta", replace
+save "C:\Users\ta62nime\FAUbox\Kursmaterial\EBE_Effective_Programming\Assignment_Florian_Auferoth\assignment\src\data_management\STU_red.dta", replace

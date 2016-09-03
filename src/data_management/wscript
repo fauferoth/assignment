@@ -7,6 +7,18 @@ def build(ctx):
     ctx(
         features='run_do_script',
         source='STU_prep.do',
-        target=ctx.path_to(ctx, 'OUT_DATA', 'initial_locations.csv'),
-        name='get_simulation_draws'
+        target=ctx.path_to(ctx, 'OUT_DATA', 'STU_red.dta'),
+        name='STU_red'
+    )
+    ctx(
+        features='run_do_script',
+        source='PAR_prep.do',
+        target=ctx.path_to(ctx, 'OUT_DATA', 'PAR_red.dta'),
+        name='PAR_red'
+    )
+    ctx(
+        features='run_do_script',
+        source='merge.do',
+        target=ctx.path_to(ctx, 'OUT_DATA', 'PISA_data.dta'),
+        name='PISA'
     )
