@@ -6,5 +6,5 @@ rename v4 OECD //18 - //18 (F,0)
 rename v5 NC //19 - //24 (A)
 rename v6 SCHOOLID //25 - //31 (A)
 rename v7 StIDStd //32 - //36 (A)
-rename v* SCOc*
+rename v* SCOv*
 save "C:\Users\ta62nime\FAUbox\Kursmaterial\EBE_Effective_Programming\Assignment_Florian_Auferoth\assignment\src\data_management\SCO_red.dta", replace
