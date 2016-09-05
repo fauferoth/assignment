@@ -1,0 +1,46 @@
+\documentclass{beamer}
+\usepackage{ngerman}
+\usepackage{marvosym}
+\usepackage{wasysym}
+\usepackage{eurosym}
+\usepackage{textcomp}
+\usepackage[authoryear]{natbib}
+\usepackage{minibox}
+\usepackage{caption}
+\usetheme[pageofpages=1,
+          bullet=circle,
+          titleline=true,
+          alternativetitlepage=true,
+          %titlepagelogo=FAU_WiSo,
+          %titlepagelogo2=EBE
+         % titlegraphic=FAU_siegel,
+         % watermark=FAU_siegel,
+        %  watermarkheight=200px,
+       %  watermarkheightmult=4,
+          ]{FAU}
+               
+
+               
+\setbeamercolor{block title}{fg=FAUblue,bg=white} 
+\setbeamercolor{block body}{use=block title,bg=block title.bg} 
+\setbeamercolor{section in toc}{fg=FAUblue}
+\captionsetup[table]{labelformat=empty, labelsep=colon}
+
+
+\begin{document}
+
+
+\begin{frame}
+\begin{itemize}
+\item These are the first steps in the analysis of a PISA dataset.
+\item Unfortunately I was not successful in using python to import and code the data
+\item I am thus relying on STATA and testing the integration of processes with LaTeX
+\end{itemize}
+\end{frame}
+\input{sum_stats.tex}
+\begin{frame}
+
+\end{frame}
+
+\end{document}
+
