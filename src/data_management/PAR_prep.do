@@ -145,4 +145,5 @@ rename v142 senwgt_PaQ //406 - //414 (F,4)
 rename v143 VER_PAQ //415 - //421 (A)
 rename v144 Date2
 rename v145 Date3
-save "C:\Users\ta62nime\FAUbox\Kursmaterial\EBE_Effective_Programming\Assignment_Florian_Auferoth\assignment\src\data_management\PAR_red.dta", replace
+save "C:\Users\ta62nime\FAUbox\Kursmaterial\EBE_Effective_Programming\Assignment_Florian_Auferoth\assignment\bld\src\original_data\PAR_red.dta", replace
+*save "C:\Users\ta62nime\FAUbox\Kursmaterial\EBE_Effective_Programming\Assignment_Florian_Auferoth\assignment\src\data_management\PAR_red.dta", replace

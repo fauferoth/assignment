@@ -7,4 +7,5 @@ rename v5 NC //19 - //24 (A)
 rename v6 SCHOOLID //25 - //31 (A)
 rename v7 StIDStd //32 - //36 (A)
 rename v* SCOv*
-save "C:\Users\ta62nime\FAUbox\Kursmaterial\EBE_Effective_Programming\Assignment_Florian_Auferoth\assignment\src\data_management\SCO_red.dta", replace
+save "C:\Users\ta62nime\FAUbox\Kursmaterial\EBE_Effective_Programming\Assignment_Florian_Auferoth\assignment\bld\src\original_data\SCO_red.dta", replace
+*save "C:\Users\ta62nime\FAUbox\Kursmaterial\EBE_Effective_Programming\Assignment_Florian_Auferoth\assignment\src\data_management\SCO_red.dta", replace

@@ -7,7 +7,7 @@ def build(ctx):
     ctx(
         features='run_do_script',
         source='STU_prep.do',
-        target=ctx.path_to(ctx, 'OUT_DATA', 'STU_red.dta'),
+        target=ctx.path_to(ctx, 'IN_DATA', 'STU_red.dta'),
         name='STU_red'
     )
     ctx(
