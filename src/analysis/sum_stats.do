@@ -1,5 +1,5 @@
 *** Summary statistics
-cd "C:\Users\ta62nime\FAUbox\Kursmaterial\EBE_Effective_Programming\Assignment_Florian_Auferoth\assignment\bld\src\analysis"
+cd "C:\Users\ta62nime\FAUbox\Kursmaterial\EBE_Effective_Programming\Assignment_Florian_Auferoth\assignment\bld\out\analysis"
 use "C:\Users\ta62nime\FAUbox\Kursmaterial\EBE_Effective_Programming\Assignment_Florian_Auferoth\assignment\bld\src\original_data\PISA_data.dta", clear
 *** # of observations, classes
 estpost sum mathscore readscore sciencescore  first_gen_migrant

@@ -7,31 +7,39 @@ def build(ctx):
     ctx(
         features='run_do_script',
         source='STU_prep.do',
+        #deps=ctx.path_to(ctx, 'IN_DATA', 'STU_red.txt'),
         target=ctx.path_to(ctx, 'IN_DATA', 'STU_red.dta'),
         name='STU_red'
     )
     ctx(
         features='run_do_script',
         source='PAR_prep.do',
+        #deps=ctx.path_to(ctx, 'IN_DATA', 'PAR_red.txt'),
         target=ctx.path_to(ctx, 'OUT_DATA', 'PAR_red.dta'),
         name='PAR_red'
     )
     ctx(
         features='run_do_script',
         source='SCO_prep.do',
+        #deps=ctx.path_to(ctx, 'IN_DATA', 'SCO_red.txt'),
         target=ctx.path_to(ctx, 'OUT_DATA', 'SCO_red.dta'),
         name='SCO_red'
     )
     ctx(
         features='run_do_script',
         source='merge.do',
+        #deps=[
+        #    ctx.path_to(ctx, 'OUT_DATA', 'STU_red.dta'),
+        #    ctx.path_to(ctx, 'OUT_DATA', 'PAR_red.dta'),
+        #    ctx.path_to(ctx, 'OUT_DATA', 'SCO_red.dta),
+        #],
         target=ctx.path_to(ctx, 'OUT_DATA', 'PISA_data_raw.dta'),
         name='PISA'
     )
     ctx(
         features='run_do_script',
-    
         source='Variable_prep.do',
+        #deps=ctx.path_to(ctx, 'OUT_DATA', 'PISA_data_raw.csv'),
         target=ctx.path_to(ctx, 'OUT_DATA', 'PISA_data.dta'),
         name='PISA'
     )

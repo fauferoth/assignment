@@ -55,64 +55,39 @@
 
 \begin{document}
 
-\title{TTT
-\thanks{NNN: UUU, Address. \href{mailto:x@y.z} {\nolinkurl{x [at] y [dot] z}}, tel.~+00000.}
+\title{EBE Effective Programming Practices: Assignment
 % subtitle: 
 % \\[1ex] 
 % \large Subtitle here
 }
 
-\author{NNN
+\author{Florian Auferoth
 % \\[1ex]
 % Additional authors here
 }
 
 \date{
-{\bf Preliminary -- please do not quote} 
-\\[1ex] 
 \today
 }
 
 \maketitle
 
 
-\begin{abstract}
-	Some abstract here.
-\end{abstract}
-\clearpage
+The goal of the project is to automate the import and analysis of a new dataset. The dataset used is the PISA 2012 dataset provided by the OECD. The original data is provided in multiple .txt files that is unfortunately lacking consistent separators. As a result importing the data is fairly tedious. My attempts to write python code that tansforms the data into a suitable format were unsuccessful and help on this issue would be much appreciated. \\ 
+The data that is included in the project folder is a reduced dataset (only for Germany) that I converted manually from the original .txt files. My goal was to integrate the import of the data, the merging of the different files, some basic analysis (summary statistics) and provide very basic information in a pdf file. 
 
-\section{Introduction} % (fold)
-\label{sec:introduction}
+ \medskip
+The summary statistics should be provided here:\\
+\input{../../bld/out/analysis/sum_stats.tex}
+\\
+\medskip
 
-If you are using this template, please cite this item from the references: \citet{GaudeckerEconProjectTemplates}
-
-\citet{Schelling69} example in the code is taken from \citet{StachurskiSargent13}
-
-The decision rule of an agent is the following:
-\input{formulas/decision_rule}
-
-\begin{figure}
-    \caption{Segregation by cycle in the baseline \citet{Schelling69} model as in the \citet{StachurskiSargent13} example}
-    
-    \includegraphics[width=\textwidth]{../../out/figures/schelling_baseline}
-
-\end{figure}
-
-
-\begin{figure}
-    \caption{Segregation by cycle in the baseline \citet{Schelling69} model, limiting the number of potential moves per period to two}
-    
-    \includegraphics[width=\textwidth]{../../out/figures/schelling_max_moves_2}
-
-\end{figure}
-
-% section introduction (end)
-
-
-
-\setstretch{1}
-\printbibliography
-\setstretch{1.5}
+\textbf{Issues encountered:}
+\begin{itemize}
+\item Converting basic .txt data into .dta using python
+\item Issues in compiling pdf: table is missing
+\item \textit{\% r command exit status \% r " \% (msg, retcode)}
+\end{itemize}
 
 %\appendix
 %\counterwithin{table}{section}

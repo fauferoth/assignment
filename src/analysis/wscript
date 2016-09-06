@@ -6,17 +6,9 @@ def build(ctx):
         ctx(
             features='run_do_script',
             source='sum_stats.do',
-            deps=[
-                ctx.path_to(ctx, 'OUT_DATA', 'initial_locations.csv'),
-                ctx.path_to(ctx, 'IN_MODEL_CODE', 'agent.py'),
-                ctx.path_to(ctx, 'IN_MODEL_SPECS', '{}.json'.format(model)),
-            ],
-            target=[
-                ctx.path_to(ctx, 'OUT_ANALYSIS', 'schelling_{}.pickle'.format(model)),
-                ctx.path_to(ctx, 'OUT_ANALYSIS', 'log', 'schelling_{}.log'.format(model))
-            ],
-            append=model,
-            name='schelling_{}'.format(model)
+            target=ctx.path_to(ctx, 'OUT_ANALYSIS', 'sum_stats.tex'),
+        #    append=model,
+        #    name='schelling_{}'.format(model)
         )
 
    

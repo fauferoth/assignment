@@ -1,79 +1,59 @@
-\documentclass[11pt]{beamer}
-% \documentclass[11pt,handout]{beamer}
-\usepackage[T1]{fontenc}
-\usepackage[utf8]{inputenc}
-\usepackage{float, afterpage, rotating, graphicx}
-\usepackage{epstopdf}
-\usepackage{longtable, booktabs, tabularx}
-\usepackage{fancyvrb, moreverb, relsize}
-\usepackage{eurosym, calc, chngcntr}
-\usepackage{amsmath, amssymb, amsfonts, amsthm, bm} 
+\documentclass{beamer}
+%\usepackage{ngerman}
+\usepackage{marvosym}
+\usepackage{wasysym}
+\usepackage{eurosym}
+\usepackage{textcomp}
+\usepackage[authoryear]{natbib}
+\usepackage{minibox}
+\usepackage{caption}
+\usepackage{multicol}
+\usepackage{booktabs}
+\usetheme[pageofpages=1,
+          bullet=circle,
+          titleline=true,
+          alternativetitlepage=true,
+          %titlepagelogo=FAU_WiSo,
+          %titlepagelogo2=EBE
+         % titlegraphic=FAU_siegel,
+         % watermark=FAU_siegel,
+        %  watermarkheight=200px,
+       %  watermarkheightmult=4,
+          ]{FAU}
+               
 
-\usepackage[backend=biber, natbib=true, bibencoding=inputenc, bibstyle=authoryear-ibid, citestyle=authoryear-comp, maxcitenames=3, maxbibnames=10]{biblatex}
-\setlength{\bibitemsep}{1.5ex}
-\addbibresource{refs.bib}
-
-\hypersetup{colorlinks=true, linkcolor=black, anchorcolor=black, citecolor=black, filecolor=black, menucolor=black, runcolor=black, urlcolor=black}
-
-\setbeamertemplate{footline}[frame number]
-\setbeamertemplate{navigation symbols}{}
-\setbeamertemplate{frametitle}{\centering\vspace{1ex}\insertframetitle\par}
+               
+\setbeamercolor{block title}{fg=FAUblue,bg=white} 
+\setbeamercolor{block body}{use=block title,bg=block title.bg} 
+\setbeamercolor{section in toc}{fg=FAUblue}
+\renewcommand{\footnotesize}{8pt}
+\captionsetup[table]{labelformat=empty, labelsep=colon}
 
 
 \begin{document}
 
-\title{TTT}
-
-\author[NNN] % \& others]
-{
-{\bf NNN}\\
-{\small UUU}\\[1ex]
-%{\bf Add other authors}\\
-%{\small and affilitations}\\[1ex]
-}
-
-\date{
-{\bf location here}\\
-{\small date here}
-}
-
 
 \begin{frame}
-    \titlepage
-    \note{~}
+The goal of the project is to automate the import and analysis of a new dataset. The dataset used is the PISA 2012 dataset provided by the OECD. The original data is provided in multiple .txt files that is unfortunately lacking consistent separators. As a result importing the data is fairly tedious. My attempts to write python code that tansforms the data into a suitable format were unsuccessful and help on this issue would be much appreciated. \\ 
+The data that is included in the project folder is a reduced dataset (only for Germany) that I converted manually from the original .txt files. My goal was to integrate the import of the data, the merging of the different files, some basic analysis (summary statistics) and provide very basic information in a pdf file. 
 \end{frame}
 
-
-\begin{frame}[t]
-    \frametitle{heading here}
-    \begin{itemize}
-        \item<+-> Please cite this template as: \citet{GaudeckerEconProjectTemplates}
-        \item<+-> \citet{Schelling69} example in the code is taken from \citet{StachurskiSargent13}.
-        \item<+-> The decision rule of an agent is \input{formulas/decision_rule}
-    \end{itemize}
-    \note{~}
-\end{frame}
-
-
-% Print black screen only in presentation mode for finishing up.
-\mode<beamer> {
-    \beamersetaveragebackground{black}
-    \begin{frame}
-        \frametitle{}
-    \end{frame}
-
-    \beamersetaveragebackground{white}
-}
-
-\begin{frame}[allowframebreaks]
-    \frametitle{References}
-    \renewcommand{\bibfont}{\normalfont\footnotesize}
-    \printbibliography
-\end{frame}
-
-\begin{frame}
+\begin{frame}{Summary statistics}
 \begin{center}
-\input{../../bld/src/analysis/sum_stats.tex}
+\input{../../bld/out/analysis/sum_stats.tex}
 \end{center}
 
+\end{frame}
+
+\begin{frame}{Issues}
+\begin{itemize}
+\item Converting basic .txt data into .dta using python
+\item Issues in compiling pdf: table is missing
+\item \textit{\% r command exit status \% r " \% (msg, retcode)}
+\end{itemize}
+
+\end{frame}
+
+
 \end{document}
+

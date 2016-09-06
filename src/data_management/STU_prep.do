@@ -640,5 +640,5 @@ rename v634 senwgt_STU //2333 - //2341
 rename v635 VER_STU //2342 - //2348 (A)
 drop hv42
 save "C:\Users\ta62nime\FAUbox\Kursmaterial\EBE_Effective_Programming\Assignment_Florian_Auferoth\assignment\bld\src\original_data\STU_red.dta", replace
-*save "C:\Users\ta62nime\FAUbox\Kursmaterial\EBE_Effective_Programming\Assignment_Florian_Auferoth\assignment\src\data_management\STU_red.dta", replace
+/*save "C:\Users\ta62nime\FAUbox\Kursmaterial\EBE_Effective_Programming\Assignment_Florian_Auferoth\assignment\src\data_management\STU_red.dta", replace
 
