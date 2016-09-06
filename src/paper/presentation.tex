@@ -7,6 +7,8 @@
 \usepackage[authoryear]{natbib}
 \usepackage{minibox}
 \usepackage{caption}
+\usepackage{multicol}
+\usepackage{booktabs}
 \usetheme[pageofpages=1,
           bullet=circle,
           titleline=true,
@@ -24,6 +26,7 @@
 \setbeamercolor{block title}{fg=FAUblue,bg=white} 
 \setbeamercolor{block body}{use=block title,bg=block title.bg} 
 \setbeamercolor{section in toc}{fg=FAUblue}
+\renewcommand{\footnotesize}{8pt}
 \captionsetup[table]{labelformat=empty, labelsep=colon}
 
 
@@ -37,8 +40,12 @@
 \item I am thus relying on STATA and testing the integration of processes with LaTeX
 \end{itemize}
 \end{frame}
-\input{sum_stats.tex}
+
 \begin{frame}
+\begin{center}
+\input{../../bld/src/analysis/sum_stats.tex}
+\end{center}
+
 
 \end{frame}
 
