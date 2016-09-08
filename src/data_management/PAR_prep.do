@@ -1,4 +1,7 @@
-import delimited "C:\Users\ta62nime\FAUbox\Kursmaterial\EBE_Effective_Programming\Assignment_Florian_Auferoth\assignment\src\data_management\PAR_red.txt", clear
+*** Preparing the data from parent questionnaires
+include project_paths.do
+log using "data_prep.log", replace
+import delimited "$PATH_IN_DATA/PAR_red.txt", clear
 
 rename v1 CNT //1 - //3 (A)
 rename v2 SUBNATIO //4 - //10 (A)
@@ -145,5 +148,4 @@ rename v142 senwgt_PaQ //406 - //414 (F,4)
 rename v143 VER_PAQ //415 - //421 (A)
 rename v144 Date2
 rename v145 Date3
-save "C:\Users\ta62nime\FAUbox\Kursmaterial\EBE_Effective_Programming\Assignment_Florian_Auferoth\assignment\bld\src\original_data\PAR_red.dta", replace
-*save "C:\Users\ta62nime\FAUbox\Kursmaterial\EBE_Effective_Programming\Assignment_Florian_Auferoth\assignment\src\data_management\PAR_red.dta", replace
+save "$PATH_OUT_DATA/PAR_red.dta", replace

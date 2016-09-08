@@ -1,3 +1,6 @@
+************************
+*** Merging PISA datasources
+*** Florian Auferoth
 
 *** Start with parent dataset
 use "C:\Users\ta62nime\FAUbox\Kursmaterial\EBE_Effective_Programming\Assignment_Florian_Auferoth\assignment\bld\src\original_data\PAR_red.dta", clear

@@ -1,4 +1,6 @@
-import delimited "C:\Users\ta62nime\FAUbox\Kursmaterial\EBE_Effective_Programming\Assignment_Florian_Auferoth\assignment\src\data_management\SCO_red.txt", clear
+*** Preparing data on achievement scores
+
+import delimited SCO_red.txt, clear
 rename v1 CNT //1 - //3 (A)
 rename v2 SUBNATIO //4 - //10 (A)
 rename v3 STRATUM //11 - //17 (A)
@@ -7,5 +9,4 @@ rename v5 NC //19 - //24 (A)
 rename v6 SCHOOLID //25 - //31 (A)
 rename v7 StIDStd //32 - //36 (A)
 rename v* SCOv*
-save "C:\Users\ta62nime\FAUbox\Kursmaterial\EBE_Effective_Programming\Assignment_Florian_Auferoth\assignment\bld\src\original_data\SCO_red.dta", replace
-*save "C:\Users\ta62nime\FAUbox\Kursmaterial\EBE_Effective_Programming\Assignment_Florian_Auferoth\assignment\src\data_management\SCO_red.dta", replace
+save SCO_red.dta, replace

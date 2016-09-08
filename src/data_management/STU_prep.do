@@ -1,4 +1,6 @@
-import delim using "C:\Users\ta62nime\FAUbox\Kursmaterial\EBE_Effective_Programming\Assignment_Florian_Auferoth\assignment\src\data_management\STU_red.txt", clear
+*** Preparing data from Student questionnaires
+
+import delim using STU_red.txt, clear
 *correcting for mistake
 gen hv42=v42
 replace hv42=0 if missing(v42)
@@ -639,6 +641,4 @@ rename v633 VAR_UNIT //2331 - //2332
 rename v634 senwgt_STU //2333 - //2341
 rename v635 VER_STU //2342 - //2348 (A)
 drop hv42
-save "C:\Users\ta62nime\FAUbox\Kursmaterial\EBE_Effective_Programming\Assignment_Florian_Auferoth\assignment\bld\src\original_data\STU_red.dta", replace
-/*save "C:\Users\ta62nime\FAUbox\Kursmaterial\EBE_Effective_Programming\Assignment_Florian_Auferoth\assignment\src\data_management\STU_red.dta", replace
-
+save STU_red.dta, replace

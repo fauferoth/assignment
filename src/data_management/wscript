@@ -15,14 +15,14 @@ def build(ctx):
         features='run_do_script',
         source='PAR_prep.do',
         #deps=ctx.path_to(ctx, 'IN_DATA', 'PAR_red.txt'),
-        target=ctx.path_to(ctx, 'OUT_DATA', 'PAR_red.dta'),
+        target=ctx.path_to(ctx, 'IN_DATA', 'PAR_red.dta'),
         name='PAR_red'
     )
     ctx(
         features='run_do_script',
         source='SCO_prep.do',
         #deps=ctx.path_to(ctx, 'IN_DATA', 'SCO_red.txt'),
-        target=ctx.path_to(ctx, 'OUT_DATA', 'SCO_red.dta'),
+        target=ctx.path_to(ctx, 'IN_DATA', 'SCO_red.dta'),
         name='SCO_red'
     )
     ctx(
