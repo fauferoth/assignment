@@ -1,5 +1,7 @@
-*use "C:\Users\ta62nime\FAUbox\Kursmaterial\EBE_Effective_Programming\Assignment_Florian_Auferoth\assignment\src\data_management\PISA_data_raw.dta", clear
-use "C:\Users\ta62nime\FAUbox\Kursmaterial\EBE_Effective_Programming\Assignment_Florian_Auferoth\assignment\bld\src\original_data\PISA_data_raw.dta", clear 
+include project_paths
+
+
+use "${PATH_OUT_DATA}/PISA_data_raw.dta", clear 
 
 *** Identify variables of interest
 label var PA21Q01 "Country of birth mother"
@@ -35,5 +37,4 @@ replace first_gen_migrant=0 if PA21Q01==1 & PA21Q02==1
 *** Finding aggregates
 
 
-*save "C:\Users\ta62nime\FAUbox\Kursmaterial\EBE_Effective_Programming\Assignment_Florian_Auferoth\assignment\src\data_management\PISA_data_raw.dta", replace
-save "C:\Users\ta62nime\FAUbox\Kursmaterial\EBE_Effective_Programming\Assignment_Florian_Auferoth\assignment\bld\src\original_data\PISA_data.dta", replace
+save "${PATH_OUT_DATA}/PISA_data.dta", replace

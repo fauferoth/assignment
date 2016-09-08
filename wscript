@@ -14,18 +14,30 @@ def set_project_paths(ctx):
 
     pp = {}
     pp['PROJECT_ROOT'] = '.'
-    pp['IN_DATA'] = 'src/original_data'
+    pp['IN_DATA'] = 'src/data_management'
     pp['IN_MODEL_CODE'] = 'src/model_code'
     pp['IN_MODEL_SPECS'] = 'src/model_specs'
-    pp['OUT_DATA'] = '{}/src/original_data'.format(out)
+    pp['OUT_DATA'] = '{}/out/data'.format(out)
     pp['OUT_ANALYSIS'] = '{}/out/analysis'.format(out)
     pp['OUT_FINAL'] = '{}/out/final'.format(out)
     pp['OUT_FIGURES'] = '{}/out/figures'.format(out)
     pp['OUT_TABLES'] = '{}/out/tables'.format(out)
+    pp['LIBRARY'] = 'src/library'
+
+    # Stata's adopaths get special treatment.
+    lib = pp['LIBRARY']
+    pp['ADO'] = {}
+    pp['ADO']['PERSONAL'] = os.path.join(lib, 'stata/ado_ext/personal')
+    pp['ADO']['PLUS'] = os.path.join(lib, 'stata/ado_ext/plus')
+    pp['ADO']['LOCAL'] = os.path.join(lib, 'stata')
 
     # Convert the directories into Waf nodes.
     for key, val in pp.items():
-        pp[key] = ctx.path.make_node(val)
+        if not key == 'ADO':
+            pp[key] = ctx.path.make_node(val)
+        else:
+            for adokey, adoval in val.items():
+                pp[key][adokey] = ctx.path.make_node(adoval)
 
     return pp
 
@@ -71,6 +83,6 @@ def build(ctx):
     ctx.env.PROJECT_PATHS = set_project_paths(ctx)
     ctx.path_to = path_to
     # Generate header file with project paths in 'bld' directory
-    ctx(features='write_project_paths', target='project_paths.py')
+    ctx(features='write_project_paths', target='project_paths.do')
     ctx.add_group()
     ctx.recurse('src')

@@ -2,15 +2,9 @@
 
 
 def build(ctx):
-	#
-        ctx(
-            features='run_do_script',
-            source='sum_stats.do',
-            target=ctx.path_to(ctx, 'OUT_ANALYSIS', 'sum_stats.tex'),
-        #    append=model,
-        #    name='schelling_{}'.format(model)
-        )
-
-   
-
-        
+    ctx(
+        features='run_do_script',
+        source='sum_stats.do',
+        deps=ctx.path_to(ctx, 'OUT_DATA', 'PISA_data.dta'),
+        target=ctx.path_to(ctx, 'OUT_ANALYSIS', 'sum_stats.tex'),
+    )

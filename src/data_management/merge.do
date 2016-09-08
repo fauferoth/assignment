@@ -1,13 +1,15 @@
+include project_paths
+
 
 *** Start with parent dataset
-use "C:\Users\ta62nime\FAUbox\Kursmaterial\EBE_Effective_Programming\Assignment_Florian_Auferoth\assignment\bld\src\original_data\PAR_red.dta", clear
+use "${PATH_OUT_DATA}/PAR_red.dta", clear
 *** Merge Student questionnaire
-merge 1:1 CNT StIDStd using "C:\Users\ta62nime\FAUbox\Kursmaterial\EBE_Effective_Programming\Assignment_Florian_Auferoth\assignment\bld\src\original_data\STU_red.dta"
+merge 1:1 CNT StIDStd using "${PATH_OUT_DATA}/STU_red.dta"
 drop _merge
 *** Merge Scores
-merge 1:1 CNT StIDStd using "C:\Users\ta62nime\FAUbox\Kursmaterial\EBE_Effective_Programming\Assignment_Florian_Auferoth\assignment\bld\src\original_data\SCO_red.dta"
+merge 1:1 CNT StIDStd using "${PATH_OUT_DATA}/SCO_red.dta"
 *** Save as PISA_data
-save "C:\Users\ta62nime\FAUbox\Kursmaterial\EBE_Effective_Programming\Assignment_Florian_Auferoth\assignment\bld\src\original_data\PISA_data_raw.dta", replace 
+save "${PATH_OUT_DATA}/PISA_data_raw.dta", replace 
 /*
 *** Start with parent dataset
 use "C:\Users\ta62nime\FAUbox\Kursmaterial\EBE_Effective_Programming\Assignment_Florian_Auferoth\assignment\src\data_management\PAR_red.dta", clear
